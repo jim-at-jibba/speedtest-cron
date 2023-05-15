@@ -10,10 +10,12 @@
 
 > Needed to check my internet regularly for flake. Did this.
 
+N.B Mac only at the moment
+
 ## Requirements
 
 - [Speedtest CLI](https://www.speedtest.net/apps/cli)
-- [MacOS](https://github.com/julienXX/terminal-notifier)
+- [Terminal Notifier](https://github.com/julienXX/terminal-notifier)
 
 ## Usage
 
