@@ -90,12 +90,13 @@ func main() {
 		return
 	}
 	formatttedDate := t.Format("02/01/06")
+	formatttedTime := t.Format("15:30")
 
 	downloadBits := float64(r.Download.Bandwidth) * 8
 	downloadMbps := downloadBits / 1000000
 	uploadBits := float64(r.Upload.Bandwidth) * 8
 	uploadMbps := uploadBits / 1000000
-	notifyCmd := exec.Command("terminal-notifier", "-message", fmt.Sprintf("Download %.2f Mbps \n Upload %.2f Mbps", downloadMbps, uploadMbps), "-title", fmt.Sprintf("%s - %s", formatttedDate, r.Server.Name), "-sound", "Funky")
+	notifyCmd := exec.Command("terminal-notifier", "-message", fmt.Sprintf("Download %.2f Mbps \nUpload %.2f Mbps", downloadMbps, uploadMbps), "-title", fmt.Sprintf("%s - %s - %s", formatttedDate, formatttedTime, r.Server.Name), "-sound", "Funky")
 	_ = notifyCmd.Start()
 
 }
